@@ -1,0 +1,30 @@
+cc_prebuilt_library_shared {
+    name: "sensors.vendor.msm8916",
+    srcs: ["proprietary/vendor/lib/hw/sensors.vendor.msm8916.so"],
+    strip: { none: true },
+    vendor: true,
+    compile_multilib: "32",
+    shared_libs: ["liblog", "libcutils", "libutils", "libc++"],
+    relative_install_path: "hw",
+    check_elf_files: false,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsec-ril",
+    srcs: ["proprietary/vendor/lib/libsec-ril.so"],
+    strip: { none: true },
+    vendor: true,
+    compile_multilib: "32",
+    shared_libs: ["libcrypto", "libcutils", "libdiag", "libidl", "libnetutils", "libqcci_legacy", "libqmi", "libqmiservices", "libril-qcril-hook-oem", "libsecnativefeature", "libsqlite", "libstlport", "libtime_genoff"],
+    check_elf_files: false,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsec-ril-dsds",
+    srcs: ["proprietary/vendor/lib/libsec-ril-dsds.so"],
+    strip: { none: true },
+    vendor: true,
+    compile_multilib: "32",
+    shared_libs: ["libcrypto", "libcutils", "libdiag", "libidl", "libnetutils", "libqcci_legacy", "libqmi", "libqmiservices", "libril-qcril-hook-oem", "libsecnativefeature", "libsqlite", "libstlport", "libtime_genoff"],
+    check_elf_files: false,
+}
